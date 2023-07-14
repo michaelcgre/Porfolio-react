@@ -1,0 +1,14 @@
+.header-logo {
+  width: 125px;
+}
+
+.header-links {
+  font-family: "Bangers";
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  color: #192a3d;
+}
+
+.header-links:hover {
+  text-decoration: underline;
+}

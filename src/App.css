@@ -1,0 +1,18 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bangers";
+  letter-spacing: 0.1rem;
+}
+
+p {
+  font-family: "Roboto";
+}
+
+.header-wrapper,
+.intro-wrapper {
+  background-color: #f9efef;
+}
