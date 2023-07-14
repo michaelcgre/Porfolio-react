@@ -1,0 +1,27 @@
+.about-me-wrapper {
+  background-color: #526863;
+  padding: 5rem 0 5rem 0;
+}
+
+.about-me-description {
+  margin: 0 8rem 0 8rem;
+}
+
+.skill-card {
+  width: 30rem;
+  background-color: #f9efef !important;
+}
+
+.card-logo {
+  background-color: #8e78a1;
+  width: 4.5rem;
+  border-radius: 50%;
+}
+
+.card-header {
+  background-color: transparent !important;
+}
+
+.skill-icon {
+  margin-right: 0.5rem;
+}

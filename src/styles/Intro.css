@@ -1,3 +1,38 @@
+.intro-wrapper {
+  height: 100vh;
+}
+
+.intro-description {
+  height: 30rem;
+}
+
 .intro-title {
   font-size: 5rem;
+}
+
+.icon {
+  color: #8e78a1;
+}
+
+.image-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.intro-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: tiltAnimation 3s infinite alternate;
+}
+
+@keyframes tiltAnimation {
+  0% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(5deg);
+  }
 }
