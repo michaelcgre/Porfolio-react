@@ -1,6 +1,21 @@
 .about-me-wrapper {
-  background-color: #526863;
+  background: url("../assets/Background.png") #526863;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
   padding: 5rem 0 5rem 0;
+}
+
+@media (max-width: 584px) {
+  .about-me-wrapper {
+    background-image: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .about-me-wrapper {
+    background-image: url(../assets/BackgroundLarge.png);
+  }
 }
 
 .about-me-description {

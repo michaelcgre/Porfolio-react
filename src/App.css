@@ -13,6 +13,7 @@ p {
 }
 
 .header-wrapper,
-.intro-wrapper {
+.intro-wrapper,
+.projects-wrapper {
   background-color: #f9efef;
 }

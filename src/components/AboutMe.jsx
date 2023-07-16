@@ -1,4 +1,7 @@
 import { Container, Row, Col, Card, CardBody, CardHeader } from "reactstrap";
+import { animated, useSpring } from "react-spring";
+import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
@@ -15,6 +18,23 @@ import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import "../styles/AboutMe.css";
 
 const AboutMe = () => {
+  const [toggle, setToggle] = useState(false);
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const fade = useSpring({
+    opacity: toggle ? 1 : 0,
+    config: { duration: 1000 },
+  });
+
+  useEffect(() => {
+    if (inView) {
+      setToggle(true);
+    }
+  }, [inView]);
+
   return (
     <div className="about-me-wrapper">
       <Container>
@@ -35,70 +55,75 @@ const AboutMe = () => {
         </Row>
         <Row>
           <Col className="d-flex justify-content-center align-items-center">
-            <Card className="skill-card">
-              <Col className="d-flex justify-content-center align-items-center">
-                <FontAwesomeIcon
-                  className="fs-1 my-4 card-logo py-3"
-                  icon={faLaptopCode}
-                />
-              </Col>
-              <CardHeader className="d-flex justify-content-center align-content-center card-title">
-                <h3 className="fs-2">Skills</h3>
-              </CardHeader>
-              <CardBody className="d-flex justify-content-center align-items-center">
-                <Col className="text-center">
-                  <ul>
-                    <FontAwesomeIcon className="skill-icon" icon={faHtml5} />
-                    HTML
-                  </ul>
-                  <ul>
-                    <FontAwesomeIcon className="skill-icon" icon={faCss3Alt} />
-                    CSS
-                  </ul>
-                  <ul>
-                    <FontAwesomeIcon className="skill-icon" icon={faSass} />
-                    SASS
-                  </ul>
-                  <ul>
-                    <FontAwesomeIcon
-                      className="skill-icon"
-                      icon={faBootstrap}
-                    />
-                    Bootstrap
-                  </ul>
-                  <ul>
-                    <FontAwesomeIcon className="skill-icon" icon={faJs} />
-                    Javascript
-                  </ul>
-                  <ul>
-                    <FontAwesomeIcon className="skill-icon" icon={faReact} />
-                    React
-                  </ul>
+            <animated.div style={fade} ref={ref}>
+              <Card className="skill-card">
+                <Col className="d-flex justify-content-center align-items-center">
+                  <FontAwesomeIcon
+                    className="fs-1 my-4 card-logo py-3"
+                    icon={faLaptopCode}
+                  />
                 </Col>
-                <Col className="text-center me-5">
-                  <ul>
-                    <FontAwesomeIcon className="skill-icon" icon={faReact} />
-                    React Native
-                  </ul>
-                  <ul>
-                    <FontAwesomeIcon className="skill-icon" icon={faNodeJs} />
-                    Node.js
-                  </ul>
-                  <ul>
-                    <FontAwesomeIcon className="skill-icon" icon={faNodeJs} />
-                    Express
-                  </ul>
-                  <ul>
-                    <FontAwesomeIcon className="skill-icon" icon={faEnvira} />
-                    MongoDB
-                  </ul>
-                  <ul>
-                    <FontAwesomeIcon className="skill-icon" icon={faGit} />
-                    Git
-                  </ul>
-                </Col>
-              </CardBody>
-            </Card>
+                <CardHeader className="d-flex justify-content-center align-content-center card-title">
+                  <h3 className="fs-2">Skills</h3>
+                </CardHeader>
+                <CardBody className="d-flex justify-content-center align-items-center">
+                  <Col className="text-center">
+                    <ul>
+                      <FontAwesomeIcon className="skill-icon" icon={faHtml5} />
+                      HTML
+                    </ul>
+                    <ul>
+                      <FontAwesomeIcon
+                        className="skill-icon"
+                        icon={faCss3Alt}
+                      />
+                      CSS
+                    </ul>
+                    <ul>
+                      <FontAwesomeIcon className="skill-icon" icon={faSass} />
+                      SASS
+                    </ul>
+                    <ul>
+                      <FontAwesomeIcon
+                        className="skill-icon"
+                        icon={faBootstrap}
+                      />
+                      Bootstrap
+                    </ul>
+                    <ul>
+                      <FontAwesomeIcon className="skill-icon" icon={faJs} />
+                      Javascript
+                    </ul>
+                    <ul>
+                      <FontAwesomeIcon className="skill-icon" icon={faReact} />
+                      React
+                    </ul>
+                  </Col>
+                  <Col className="text-center me-5">
+                    <ul>
+                      <FontAwesomeIcon className="skill-icon" icon={faReact} />
+                      React Native
+                    </ul>
+                    <ul>
+                      <FontAwesomeIcon className="skill-icon" icon={faNodeJs} />
+                      Node.js
+                    </ul>
+                    <ul>
+                      <FontAwesomeIcon className="skill-icon" icon={faNodeJs} />
+                      Express
+                    </ul>
+                    <ul>
+                      <FontAwesomeIcon className="skill-icon" icon={faEnvira} />
+                      MongoDB
+                    </ul>
+                    <ul>
+                      <FontAwesomeIcon className="skill-icon" icon={faGit} />
+                      Git
+                    </ul>
+                  </Col>
+                </CardBody>
+              </Card>
+            </animated.div>
           </Col>
         </Row>
       </Container>
