@@ -1,10 +1,16 @@
 import { Container, Row, Col } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import PortraitDrawing from "../assets/Bangers.png";
 import "../styles/Intro.css";
 
 const Intro = () => {
+  const email = "michaelcgregorio06@gmail.com";
+
+  const handleEmailClick = () => {
+    window.location.href = `mailto:${email}`;
+  };
   return (
     <div className="intro-wrapper">
       <Container>
@@ -16,12 +22,18 @@ const Intro = () => {
               and functional websites.
             </p>
             <div className="d-flex gap-4">
-              <a href="#">
+              <a href="https://github.com/michaelcgre" target="blank">
                 <FontAwesomeIcon className="fs-1 icon" icon={faGithub} />
               </a>
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/in/michael-cgregorio/"
+                target="blank"
+              >
                 <FontAwesomeIcon className="fs-1 icon" icon={faLinkedin} />
               </a>
+              <button onClick={handleEmailClick}>
+                <FontAwesomeIcon className="fs-1 icon" icon={faEnvelope} />
+              </button>
             </div>
           </Col>
           <Col>
