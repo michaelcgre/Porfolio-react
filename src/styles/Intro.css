@@ -1,5 +1,6 @@
 .intro-wrapper {
-  height: 100vh;
+  height: 36rem;
+  overflow: -moz-hidden-unscrollable;
 }
 
 .intro-description {
@@ -40,4 +41,31 @@
 button {
   background: none;
   border: none;
+}
+
+@media (max-width: 662px) {
+  .intro-img {
+    width: 180%;
+    left: -5.2rem !important;
+    margin-top: -5rem;
+  }
+
+  .intro-wrapper {
+    height: 50rem !important;
+  }
+
+  .intro-title {
+    font-size: 3.5rem;
+    margin-top: -5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .intro-wrapper {
+    height: 65rem;
+  }
+
+  .intro-img {
+    left: -9.5rem;
+  }
 }

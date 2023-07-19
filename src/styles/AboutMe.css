@@ -6,18 +6,6 @@
   padding: 5rem 0 5rem 0;
 }
 
-@media (max-width: 584px) {
-  .about-me-wrapper {
-    background-image: none;
-  }
-}
-
-@media (min-width: 992px) {
-  .about-me-wrapper {
-    background-image: url(../assets/BackgroundLarge.png);
-  }
-}
-
 .about-me-description {
   margin: 0 8rem 0 8rem;
 }
@@ -39,4 +27,22 @@
 
 .skill-icon {
   margin-right: 0.5rem;
+}
+
+@media (max-width: 575px) {
+  .skill-card {
+    width: 20rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .about-me-wrapper {
+    background-image: url(../assets/BackgroundLarge.png);
+  }
+}
+
+@media (max-width: 991px) {
+  .about-me-description {
+    margin: 0rem !important;
+  }
 }

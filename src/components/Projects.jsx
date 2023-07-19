@@ -60,15 +60,14 @@ const Projects = () => {
               className={`projects-row ${index % 2 === 0 ? "even" : "odd"}`}
               key={project.id}
             >
-              <Col xs={12} md={8} className="project-img my-3">
+              <Col xs={12} lg={8} className="project-img my-3">
                 <img
-                  className="img-fluid rounded"
+                  className="img-fluid rounded projects-img"
                   src={project.image}
                   alt={project.name}
-                  style={{ height: "30rem" }}
                 />
               </Col>
-              <Col xs={12} md={4} className="project-details">
+              <Col xs={12} lg={4} className="project-details">
                 <animated.div style={fade} ref={refs.current[index]}>
                   <Card className="project-card">
                     <CardHeader className="project-title">

@@ -15,7 +15,10 @@ const Intro = () => {
     <div className="intro-wrapper">
       <Container>
         <Row>
-          <Col className="d-flex flex-column justify-content-center align-items-center intro-description text-center">
+          <Col
+            lg={6}
+            className="d-flex flex-column justify-content-center align-items-center intro-description text-center"
+          >
             <h1 className="intro-title">Welcome to my universe!</h1>
             <p className="intro-text fs-4 mt-3">
               I&apos;m a web developer making sure we live in a world of elegant
@@ -37,7 +40,7 @@ const Intro = () => {
             </div>
           </Col>
           <Col>
-            <div className="image-container">
+            <div className="image-container mx-auto d-flex justify-content-center align-content-center d-lg-block mx-lg-0">
               <img
                 src={PortraitDrawing}
                 alt="Portrait Drawing"

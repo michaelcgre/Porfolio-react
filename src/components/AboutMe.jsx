@@ -66,8 +66,8 @@ const AboutMe = () => {
                 <CardHeader className="d-flex justify-content-center align-content-center card-title">
                   <h3 className="fs-2">Skills</h3>
                 </CardHeader>
-                <CardBody className="d-flex justify-content-center align-items-center">
-                  <Col className="text-center">
+                <CardBody className="d-sm-flex justify-content-center align-items-center card-body">
+                  <Col className="text-center me-5 me-sm-0">
                     <ul>
                       <FontAwesomeIcon className="skill-icon" icon={faHtml5} />
                       HTML

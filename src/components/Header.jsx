@@ -28,7 +28,7 @@ const Header = () => {
           <NavbarToggler onClick={toggleMenu} />
           <Collapse isOpen={menuOpen} navbar>
             <Nav className="ms-auto d-flex gap-5 fs-4" navbar>
-              <NavItem>
+              <NavItem className="mx-auto">
                 <a
                   className="header-links"
                   onClick={() => scrollToSection("about-section")}
@@ -36,7 +36,7 @@ const Header = () => {
                   About
                 </a>
               </NavItem>
-              <NavItem>
+              <NavItem className="mx-auto">
                 <a
                   className="header-links"
                   onClick={() => scrollToSection("portfolio-section")}
