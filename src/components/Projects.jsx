@@ -52,7 +52,7 @@ const Projects = () => {
 
           const fade = useSpring({
             opacity: toggles[index] ? 1 : 0,
-            config: { duration: 1000 },
+            config: { duration: 500 },
           });
 
           return (
