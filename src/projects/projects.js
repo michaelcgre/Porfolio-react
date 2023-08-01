@@ -9,7 +9,7 @@ export const projects = [
     image: Underground404,
     name: "Underground 404",
     description:
-      "A underground music blog for all the hiphop lovers out there.",
+      "This is a React-powered underground hip hop blog! Discover the latest trends and artists in the hip hop subculture.",
     link: "https://underground404blogs.michaelcgregorio.com/",
     github: "https://github.com/michaelcgre/underground-404-vite",
   },
@@ -17,7 +17,8 @@ export const projects = [
     id: 2,
     image: SaboresLatino,
     name: "Sabores Latino",
-    description: "A recipe page for my favorite type of food - Latin food.",
+    description:
+      "A Hispanic cousine recipe page, skillfully crafted with React and Redux for a seamless and immersive culinary adventure.",
     link: "https://saboreslatino.michaelcgregorio.com/",
     github: "https://github.com/michaelcgre/sabores-latino",
   },
@@ -25,7 +26,8 @@ export const projects = [
     id: 3,
     image: TrendingSolutions,
     name: "Trending Solutions",
-    description: "A website for a marketing agency.",
+    description:
+      "My take on a dynamic marketing agency website with multiple services, creatively built only using HTML, CSS, and JS!",
     link: "https://trendingsolutions.michaelcgregorio.com/",
     github: "https://github.com/michaelcgre/Business",
   },
@@ -33,7 +35,8 @@ export const projects = [
     id: 4,
     image: ShopClaynature,
     name: "Claynature",
-    description: "An e-commerce website for clay products.",
+    description:
+      "This is a E-commerce site dedicated to clay jewelry! Discover an exquisite collection of handcrafted clay earrings.",
     link: "https://shopclaynature.com/",
   },
 ];
