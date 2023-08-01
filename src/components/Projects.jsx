@@ -3,7 +3,7 @@ import { animated, useSpring } from "react-spring";
 import { useState, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowPointer } from "@fortawesome/free-solid-svg-icons";
+import { faArrowPointer, faCode } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Projects.css";
 import { selectAllProjects } from "../projects/projectsSlice";
 
@@ -87,6 +87,17 @@ const Projects = () => {
                         />
                         Visit
                       </a>
+                      {project.github ? (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="fs-5 btn visit-btn"
+                        >
+                          <FontAwesomeIcon className="icon" icon={faCode} />
+                          Code
+                        </a>
+                      ) : null}
                     </CardBody>
                   </Card>
                 </animated.div>
