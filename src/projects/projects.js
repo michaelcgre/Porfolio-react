@@ -18,7 +18,7 @@ export const projects = [
     image: SaboresLatino,
     name: "Sabores Latino",
     description:
-      "A Hispanic cousine recipe page, skillfully crafted with React and Redux for a seamless and immersive culinary adventure.",
+      "A Hispanic cousine recipe page, skillfully crafted with React and Redux for a seamless culinary adventure.",
     link: "https://saboreslatino.michaelcgregorio.com/",
     github: "https://github.com/michaelcgre/sabores-latino",
   },
